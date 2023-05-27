@@ -1,0 +1,18 @@
+.top-book {
+    background-image: linear-gradient( rgba(239, 239, 239, 0.7), rgba(0, 0, 0, 0.7) );
+    height: 25em;
+}
+
+.navbar-main-color {
+    background-color: #010101;
+}
+
+.main-color {
+background-color: #010101 ;
+}
+
+.homepage-carousel-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

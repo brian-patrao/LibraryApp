@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--Database connection settings-->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/reactlibrarydatabase</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">password</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!--JDBC connection pool-->
+        <property name="connection.pool_size">10</property>
+
+        <!--echo all SQL executed to stdout-->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--Entity class mapping-->
+        <mapping class="com.northeastern.csye6220.entity.Book" />
+        <mapping class="com.northeastern.csye6220.entity.Review" />
+        <mapping class="com.northeastern.csye6220.entity.Checkout" />
+    </session-factory>
+</hibernate-configuration>
